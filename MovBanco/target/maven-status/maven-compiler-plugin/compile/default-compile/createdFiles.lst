@@ -1,0 +1,12 @@
+Dao\Historicos.class
+Dao\Usuarios.class
+View\ClienteFrame.class
+com\mycompany\movbanco\MovBanco.class
+Dao\Clientes.class
+View\Teste.class
+View\ClienteFrame$2.class
+Dao\Movimentacao.class
+Dao\connectDAO.class
+View\ClienteFrame$1.class
+Dao\ContaCorrente.class
+Dao\Agencias.class
