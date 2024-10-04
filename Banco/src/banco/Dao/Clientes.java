@@ -127,4 +127,8 @@ public class Clientes {
     public void setCnpjCli(String cnpjCli) {
         this.cnpjCli = cnpjCli;
     }
+    
+    public Clientes(){
+        
+    }
 }

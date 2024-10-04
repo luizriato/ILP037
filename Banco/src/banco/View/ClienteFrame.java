@@ -30,25 +30,57 @@ public class ClienteFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jMenu_cadastro = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu_connectionTest = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(0, 0));
 
-        jButton1.setText("testar conexão");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jMenu_cadastro.setText("Cadastro");
+        jMenu_cadastro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu_cadastroMouseClicked(evt);
+            }
+        });
+        jMenu_cadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jMenu_cadastroActionPerformed(evt);
             }
         });
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuItem1.setText("Clientes");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu_cadastro.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu_cadastro);
 
         jMenu2.setText("Edit");
         jMenuBar1.add(jMenu2);
+
+        jMenu_connectionTest.setText("Connection Test");
+        jMenu_connectionTest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu_connectionTestMouseClicked(evt);
+            }
+        });
+        jMenu_connectionTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_connectionTestActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(jMenu_connectionTest);
 
         setJMenuBar(jMenuBar1);
 
@@ -56,30 +88,45 @@ public class ClienteFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jButton1)
-                .addContainerGap(164, Short.MAX_VALUE))
+            .addGap(0, 467, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jButton1)
-                .addContainerGap(125, Short.MAX_VALUE))
+            .addGap(0, 152, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        connectDAO conexao = new connectDAO();
+    private void jMenu_connectionTestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu_connectionTestMouseClicked
+               connectDAO conexao = new connectDAO();
         try {
             conexao.connectDB();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ClienteFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu_connectionTestMouseClicked
+
+    private void jMenu_connectionTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_connectionTestActionPerformed
+       // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu_connectionTestActionPerformed
+
+    private void jMenu_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_cadastroActionPerformed
+
+    }//GEN-LAST:event_jMenu_cadastroActionPerformed
+
+    private void jMenu_cadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu_cadastroMouseClicked
+      
+    }//GEN-LAST:event_jMenu_cadastroMouseClicked
+
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+       
+    }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        CadastroClientes cadastro = new CadastroClientes();
+        cadastro.setVisible(true);          // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,9 +164,10 @@ public class ClienteFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenu jMenu_cadastro;
+    private javax.swing.JMenu jMenu_connectionTest;
     // End of variables declaration//GEN-END:variables
 }
